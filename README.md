@@ -1,4 +1,11 @@
 # Knapsack Problem
+Link to Github Repo: https://github.com/jakobupton/KnapsackProblem
+
+Our topic
+
+5. Knapsack problem
+
+## Contributions:
 - Jinkai Zhang - 
 - Teny Zhang - 
 - Jakob Upton -
@@ -8,5 +15,4 @@
 
 ## Complexity Analysis
 
-## References and Link to Repo
-https://github.com/jakobupton/KnapsackProblem
+## References 
