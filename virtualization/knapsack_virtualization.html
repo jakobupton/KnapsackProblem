@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="virtualization.css">
+</head>
+<body>
+<article>
+    <table>
+        <thead>
+        <tr>
+            <th><span>Capacity:</span></th>
+            <th><span id="capacity2"></span></th>
+            <th id="head"></th>
+        </tr>
+        <tr id="column-headers">
+
+        </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+</article>
+<script src="virtualization.js"></script>
+<script>
+
+    {
+        const objects = [
+            {
+                name: 'Item 1',
+                weight: 1,
+                value: 1
+            },
+            {
+                name: 'Item 2',
+                weight: 2,
+                value: 2
+            },
+            {
+                name: 'Item 3',
+                weight: 3,
+                value: 3
+            },
+            {
+                name: 'Item 4',
+                weight: 4,
+                value: 4
+            },
+            {
+                name: 'Item 5',
+                weight: 5,
+                value: 5
+            },
+        ]
+        const capacity = 7;
+
+
+        async function demo() {
+
+
+            inti_virtualization_element();
+            const steps = knapsack_step_generator(objects, capacity);
+
+            for (let step of steps) {
+                handleMessage({data: JSON.stringify(step)})
+                await sleep(1000);
+            }
+
+        }
+
+        demo()
+
+        function sleep(n) {
+            return new Promise(resolve => {
+                setTimeout(resolve, n)
+            })
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
