@@ -4,7 +4,7 @@ let columnHeaders = document.getElementById('column-headers');
 let capacityEle = document.getElementById('capacity2');
 
 
-function inti_virtualization_element(){
+function inti_visualization_element(){
      table = document.getElementById('table');
      head = document.getElementById('head');
      columnHeaders = document.getElementById('column-headers');
@@ -253,7 +253,7 @@ function handleMessage(event) {
             capacity: data.capacity,
         })
         generateTable(app.objects, app.capacity);
-        head.innerText = 'Knapsack algorithm virtualization begin'
+        head.innerText = 'Knapsack algorithm visualization begin'
     }
     if ('select' === data.type) {
         const rowIndex = data.rowIndex;
@@ -329,7 +329,7 @@ function handleMessage(event) {
         }
 
         app = {};
-        head.innerText = 'Knapsack algorithm virtualization end'
+        head.innerText = 'Knapsack algorithm visualization end'
     }
 
 

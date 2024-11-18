@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="virtualization.css">
+    <link rel="stylesheet" href="visualization.css">
 </head>
 <body>
 <article>
@@ -15,7 +15,7 @@
         <tr>
             <th><span>Capacity:</span></th>
             <th><span id="capacity2"></span></th>
-            <th id="head"></th>
+            <th id="head">Waiting for websocket connection</th>
         </tr>
         <tr id="column-headers">
 
@@ -26,7 +26,7 @@
         </tbody>
     </table>
 </article>
-<script src="virtualization.js"></script>
+<script src="visualization.js"></script>
 <script>
 
     {
@@ -58,32 +58,15 @@
             },
         ]
         const capacity = 7;
+        //generate table
+        generateTable(objects, capacity)
 
-
-        async function demo() {
-
-
-            inti_virtualization_element();
-            const steps = knapsack_step_generator(objects, capacity);
-
-            for (let step of steps) {
-                handleMessage({data: JSON.stringify(step)})
-                await sleep(1000);
-            }
-
-        }
-
-        demo()
-
-        function sleep(n) {
-            return new Promise(resolve => {
-                setTimeout(resolve, n)
-            })
-        }
+        //knapsack algorithm
+        knapsack(objects, capacity)
     }
 
-
 </script>
-
+<script>
+</script>
 </body>
 </html>

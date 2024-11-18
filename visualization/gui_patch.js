@@ -17,7 +17,7 @@ function gatherInfo() {
 }
 
 async function generateResult() {
-    document.getElementById('virtualization_area').innerHTML = `
+    document.getElementById('visualization_area').innerHTML = `
 
     <table id="result-table" >
         <thead>
@@ -39,7 +39,7 @@ async function generateResult() {
     const capacity = parseInt(document.getElementById('capacity').value);
 
 
-    inti_virtualization_element();
+    inti_visualization_element();
     const steps = knapsack_step_generator(objects, capacity);
 
     for (let step of steps) {

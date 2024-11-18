@@ -4,20 +4,20 @@
 
 The entry point is [index.html](index.html)
 
-Code in this folder is for virtualization.
+Code in this folder is for visualization.
 
 Folder [sample_server](sample_server) contain a python demo server.
 
 ## Personal Work
 
-**There are a virtualization standalone Knapsack algorithm demo in
-file [knapsack_virtualization.html](knapsack_virtualization.html)**
+**There are a visualization standalone Knapsack algorithm demo in
+file [knapsack_visualization.html](knapsack_visualization.html)**
 
 **There are a standalone Knapsack algorithm demo in file [knapsack.html](knapsack.html)**
 
 # Note
 
-this virtualization can be run in two mode.
+this visualization can be run in two mode.
 
 1. Without server. open [GUI.html](../GUI%28html%2Ccss%2Cjs%29/GUI.html)
 
