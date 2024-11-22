@@ -16,5 +16,5 @@ Our topic
 ## Complexity Analysis
 
 ## References 
-Mongro. (n.d.). Mongro/algorithm-visualizer. GitHub. https://github.com/mongro/algorithm-visualizer 
-GeeksforGeeks. (2024a, August 5). 0/1 Knapsack problem. GeeksforGeeks. https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ 
+Mongro. (n.d.). Mongro/algorithm-visualizer. GitHub. https://github.com/mongro/algorithm-visualizer <br>
+GeeksforGeeks. (2024a, August 5). 0/1 Knapsack problem. GeeksforGeeks. https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ <br>
