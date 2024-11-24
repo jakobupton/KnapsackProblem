@@ -117,7 +117,7 @@ function knapsack(objects, capacity) {
             if (obj.weight > currentCapacity) {
                 setCellText(rowIndex, colIndex, getCellText(rowIndex - 1, colIndex));
             } else {
-                const sum = parseInt(getCellText(rowIndex - 1, currentCapacity - obj.weight)) + obj.weight;
+                const sum = parseInt(getCellText(rowIndex - 1, currentCapacity - obj.weight)) + obj.value;
                 const pre = parseInt(getCellText(rowIndex - 1, colIndex));
 
                 const result = Math.max(sum, pre);
@@ -183,7 +183,7 @@ function knapsack_step_generator(objects, capacity) {
                 })
 
             } else {
-                const sum = box[rowIndex - 1][currentCapacity - obj.weight] + obj.weight;
+                const sum = box[rowIndex - 1][currentCapacity - obj.weight] + obj.value;
                 const pre = box[rowIndex - 1][colIndex];
 
                 let max;
