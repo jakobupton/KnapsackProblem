@@ -40,14 +40,34 @@ async function generateResult() {
 
 
     inti_visualization_element();
-    const steps = knapsack_step_generator(objects, capacity);
+    const {result,keep} = knapsack_step_generator(objects, capacity);
 
-    for (let step of steps) {
+    for (let step of result) {
         handleMessage({data: JSON.stringify(step)})
         await sleep(1000);
     }
+    const optimalSolution = backtrackSolution(objects, keep, capacity);
+    document.getElementById('capacity2').innerText = capacity;
+    document.getElementById('highlightText').innerText = optimalSolution;
+    document.getElementById('highlightText').style.display = 'block';
 }
 
+function backtrackSolution(objects, keep, capacity) {
+    const selectedItems = [];
+    let currentCapacity = capacity;
+
+    for (let i = objects.length; i > 0; i--) {
+        if (keep[i][currentCapacity]) {
+            selectedItems.push(i); 
+            currentCapacity -= objects[i - 1].weight; 
+        }
+    }
+
+    const totalWeight = selectedItems.reduce((sum, i) => sum + objects[i - 1].weight, 0);
+    const totalValue = selectedItems.reduce((sum, i) => sum + objects[i - 1].value, 0);
+
+    return `The optimal solution is to choose items ${selectedItems.reverse().join(", ")} with a total weight of ${totalWeight} and a total value of ${totalValue}.`;
+}
 
 function sleep(n) {
     return new Promise(resolve => {

@@ -146,11 +146,14 @@ function knapsack_step_generator(objects, capacity) {
 
     //init box
     const box = [];
+    const keep = [];
     for (let i = 0; i <= rowCount; i++) {
         const row = [];
         box.push(row)
+        keep.push([]);
         for (let j = 0; j <= capacity; j++) {
-            row.push(0)
+            row.push(0);
+            keep[i].push(false);
         }
     }
 
@@ -187,6 +190,7 @@ function knapsack_step_generator(objects, capacity) {
                 if (sum >= pre) {
 
                     max = sum;
+                    keep[rowIndex][colIndex] = true;
                     result.push({
                         type: 'calculate2',
                         rowIndex,
@@ -200,7 +204,7 @@ function knapsack_step_generator(objects, capacity) {
 
                 } else {
                     max = pre;
-
+                    keep[rowIndex][colIndex] = false;
 
                     result.push({
                         type: 'calculate1',
@@ -223,7 +227,7 @@ function knapsack_step_generator(objects, capacity) {
         type: 'end'
     })
 
-    return result;
+    return {result, keep};
 }
 
 
