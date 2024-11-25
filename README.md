@@ -6,7 +6,7 @@ Our topic
 5. Knapsack problem
 
 ## Contributions:
-- Jinkai Zhang - 
+- Jinkai Zhang - visualization the knapsack algorithm & knapsack algorithm implemention in browser
 - Teny Zhang - UI Design
 - Jakob Upton -
 
