@@ -1,13 +1,12 @@
 import asyncio
 import websockets
-import json
 
 
 async def handle_client(websocket):
     print("Client connected")
     try:
 
-        with open('sample.txt', mode='r') as f:
+        with open('visualization/sample_server/sample.txt', mode='r') as f:
 
             line = f.readline()
             while line:
