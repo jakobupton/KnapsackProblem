@@ -7,7 +7,7 @@ Our topic
 
 ## Contributions:
 - Jinkai Zhang - visualization the knapsack algorithm & knapsack algorithm implemention in browser
-- Teny Zhang - UI Design
+- Teny Zhang - UI Design & knapsack backtracking algorithm configuration
 - Jakob Upton -
 
 ## Instructions for Running
