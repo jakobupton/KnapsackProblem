@@ -67,10 +67,10 @@ function backtrackSolution(objects, keep, capacity) {
     const totalValue = selectedItems.reduce((sum, i) => sum + objects[i - 1].value, 0);
 
     // Color the final selected values
-    for (let i = 0; i<selectedItems.length; i++){
-        let selectedElement = document.getElementById(`object_id_${i}`);
-        selectedElement.style.backgroundColor = "greenyellow";
-        selectedElement.style.color = "white";
+    for (const num of selectedItems){
+        let selectedRow = document.getElementById(`object_id_${num-1}`);
+        selectedRow.style.color = 'white';
+        selectedRow.style.backgroundColor = 'yellowgreen';
     }
 
     return `The optimal solution is to choose items ${selectedItems.reverse().join(", ")} with a total weight of ${totalWeight} and a total value of ${totalValue}.`;
