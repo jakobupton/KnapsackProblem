@@ -8,11 +8,11 @@ Given **N** items where each item has some weight and profit associated with it 
 2. Open to the index.html in your browser.
 3. Enter some values for capacity, # of items, followed by weights and values for each item.
     Some suggested values could be 5 items, with a capacity of 10.
-    1. Weight: 1 Value: 5 
-    2. Weight: 2, Value: 3
-    3. Weight: 4, Value: 5
-    4. Weight: 2, Value: 3
-    5. Weight: 5, Value: 2
+    1. Value: 5, Weight: 1
+    2. Value: 3, Weight: 2
+    3. Value: 5, Weight: 4
+    4. Value: 3, Weight: 2
+    5. Value: 2, Weight: 5
 4. The program will step through the algorithm, comparing the max value at each step, presenting the optimal solution once finished.
    
 ## Complexity Analysis

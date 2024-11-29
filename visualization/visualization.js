@@ -333,7 +333,7 @@ function handleMessage(event) {
         }
 
         app = {};
-        head.innerText = 'Knapsack algorithm visualization end'
+        head.innerText = 'Knapsack algorithm visualization complete'
     }
 
 
