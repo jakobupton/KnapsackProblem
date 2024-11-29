@@ -44,7 +44,7 @@ async function generateResult() {
 
     for (let step of result) {
         handleMessage({data: JSON.stringify(step)})
-        await sleep(1000);
+        await sleep(500);
     }
     const optimalSolution = backtrackSolution(objects, keep, capacity);
     document.getElementById('capacity2').innerText = capacity;

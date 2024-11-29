@@ -6,7 +6,7 @@ async def handle_client(websocket):
     print("Client connected")
     try:
 
-        with open('visualization/sample_server/sample.txt', mode='r') as f:
+        with open('./sample_server/sample.txt', mode='r') as f:
 
             line = f.readline()
             while line:
