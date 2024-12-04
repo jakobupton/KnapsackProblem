@@ -53,6 +53,15 @@ button {
 .button:hover {
     background-color: #0056b3; 
 }
+.rbutton{
+    background-color: #0cab41; 
+    color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: none;
+}
+.rbutton:hover {
+    background-color: #0f8b30; 
+}
 .c{
     margin-top: 10px;
     text-align: center;

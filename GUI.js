@@ -12,6 +12,19 @@ function createTable() {
     }
     var tableFooter = '</table>';
     document.getElementById('wrapper').innerHTML = tableHeader + tableBody + tableFooter;
+    document.querySelector('.rbutton').style.display = 'inline-block';
 }
 
+function autoFillTable() {
+    const profitFields = Array.from(document.querySelectorAll('.input-field[placeholder="Profit"]'));
+    const weightFields = Array.from(document.querySelectorAll('.input-field[placeholder="Weight"]'));
+
+    profitFields.forEach(field => {
+        field.value = Math.floor(Math.random() * 100) + 1; 
+    });
+
+    weightFields.forEach(field => {
+        field.value = Math.floor(Math.random() *  capacity) + 1; 
+    });
+}
 
